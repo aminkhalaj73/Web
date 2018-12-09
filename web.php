@@ -21,6 +21,7 @@
      $product = DB::table('product')
        /*  ->where('name' , 'like' , '%9%')
          ->where('description' , 'like' , '%smart%')*/
+       ->orderby('name')
          ->get();
          return view('product.index' , compact('product'));
  });
